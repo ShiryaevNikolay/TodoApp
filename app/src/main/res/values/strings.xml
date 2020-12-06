@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Todo</string>
+    <string name="create_todo">Create todo</string>
+    <string name="todo_title_toolbar">Todo</string>
+    <string name="list_is_empty">List is empty</string>
+    <string name="todo">Todo</string>
+    <string name="delete_todo">Delete todo</string>
+</resources>
