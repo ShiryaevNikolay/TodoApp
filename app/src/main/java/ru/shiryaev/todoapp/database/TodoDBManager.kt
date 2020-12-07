@@ -4,7 +4,6 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
-import ru.shiryaev.todoapp.common.keys.TodoKeys
 import ru.shiryaev.todoapp.models.Todo
 
 class TodoDBManager(
@@ -35,12 +34,6 @@ class TodoDBManager(
             put(TodoDBHelper.KEY_CHECK, checkTodo)
         }
         db.update(TodoDBHelper.TABLE_TODO, values, "${TodoDBHelper._ID} = $_id", null)
-    }
-
-    fun updateTodoList(listTodo: List<Todo>) {
-        for (todo in listTodo) {
-            updateTodo(todo.id!!, todo.todoText!!, todo.todoCheck)
-        }
     }
 
     fun deleteTodo(_id: Int) {

@@ -17,11 +17,6 @@ class TodoDBHelper(
         db?.execSQL("DROP TABLE IF EXISTS $TABLE_TODO")
         onCreate(db)
     }
-//
-//    fun updateTodo(id: Long, values: ContentValues) {
-//        val db: SQLiteDatabase = this.writableDatabase
-//        db.update(TABLE_TODO, values, "$_ID = $id", null)
-//    }
 
     companion object {
         const val TABLE_TODO = "todo_table"

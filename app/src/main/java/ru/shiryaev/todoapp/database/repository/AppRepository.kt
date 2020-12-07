@@ -19,12 +19,6 @@ class AppRepository(application: Application) {
         todoDBManager.closeDB()
     }
 
-    fun updateList(list: List<Todo>) {
-        todoDBManager.openDB()
-        todoDBManager.updateTodoList(list)
-        todoDBManager.closeDB()
-    }
-
     fun delete(_id: Int) {
         todoDBManager.openDB()
         todoDBManager.deleteTodo(_id)
