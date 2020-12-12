@@ -24,6 +24,7 @@ class DeleteTodoDialog(private val todo: Todo) : DialogFragment() {
             onCLickBtn?.invoke(todo)
             dismiss()
         }
+        // Устанавливаем прозрачность в 75%
         binding.deleteBtn.background.alpha = 192
         return binding.root
     }
