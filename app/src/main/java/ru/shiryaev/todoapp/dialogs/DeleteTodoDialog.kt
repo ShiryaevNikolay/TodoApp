@@ -8,7 +8,6 @@ import androidx.fragment.app.DialogFragment
 import ru.shiryaev.todoapp.databinding.DialogTodoMenuBinding
 import ru.shiryaev.todoapp.models.Todo
 
-
 class DeleteTodoDialog(private val todo: Todo) : DialogFragment() {
 
     var onCLickBtn: ((Todo) -> Unit)? = null
@@ -25,6 +24,7 @@ class DeleteTodoDialog(private val todo: Todo) : DialogFragment() {
             onCLickBtn?.invoke(todo)
             dismiss()
         }
+        binding.deleteBtn.background.alpha = 192
         return binding.root
     }
 
@@ -35,7 +35,7 @@ class DeleteTodoDialog(private val todo: Todo) : DialogFragment() {
         dialog!!.window!!.apply {
             attributes = p
             setGravity(Gravity.BOTTOM)
-            setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT));
+            setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         }
     }
 
