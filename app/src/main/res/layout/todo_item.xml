@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="15dp">
+        android:padding="10dp">
 
         <CheckBox
             android:id="@+id/todo_cb"
